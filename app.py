@@ -33,8 +33,6 @@ if "book" not in st.session_state:
     st.session_state.book = load_book()
 
 
-
-# --- Streamlit UI ---
 st.set_page_config(layout="wide")
 st.title("Option Spread Analyzer")
 
@@ -118,7 +116,6 @@ with tabs[0]:
                 vega_total[i] += pos * vega
                 rho_total[i] += pos * rho
 
-        # ✅ Une seule fois en dehors de la boucle
         profit = payoff - net_premium
         spread_value_today -= net_premium
 
